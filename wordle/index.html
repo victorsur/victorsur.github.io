@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mini Wordle en espanol de 5 letras creado con JavaScript." />
+  <title>Wordle | Victor Sur</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="wordle-app">
+    <a class="back-link" href="../index.html">← Volver al portfolio</a>
+
+    <header class="header">
+      <h1>Wordle en espanol</h1>
+      <p>Adivina la palabra secreta de 5 letras en un maximo de 6 intentos.</p>
+    </header>
+
+    <section class="panel" aria-live="polite">
+      <p id="statusMessage" class="status">Cargando palabras...</p>
+      <p id="attemptInfo" class="attempt-info">Intento 1 de 6</p>
+    </section>
+
+    <section class="board" id="board" aria-label="Tablero de juego"></section>
+
+    <form id="guessForm" class="guess-form" autocomplete="off">
+      <label for="guessInput">Escribe una palabra de 5 letras</label>
+      <div class="form-row">
+        <input
+          id="guessInput"
+          type="text"
+          minlength="5"
+          maxlength="5"
+          pattern="[A-Za-zÑñ]{5}"
+          placeholder="ej. barco"
+          required
+          disabled
+        />
+        <button id="submitBtn" type="submit" disabled>Probar</button>
+      </div>
+    </form>
+
+    <button id="resetBtn" class="secondary-btn" type="button" disabled>Nueva palabra</button>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
+

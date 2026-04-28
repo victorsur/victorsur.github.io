@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio personal de Victor Sur, backend developer." />
+  <title>Victor Sur | Backend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top">Victor Sur</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="mainNav" class="main-nav" aria-label="Navegacion principal">
+        <a href="#sobre-mi">Sobre mi</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+        <a class="cv-link" href="Curriculum2026io.pdf" download>Descargar CV</a>
+      </nav>
+
+      <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div>
+          <p class="kicker">Backend Developer</p>
+          <h1>Bienvenido a la página de Victor Sur, un programador backend apasionado por la tecnologia y el desarrollo de software.</h1>
+          <p class="hero-copy">
+            Construyo soluciones robustas en backend y ahora estoy llevando esa misma mentalidad al frontend
+            para crear experiencias web limpias, rapidas y muy visuales.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="Curriculum2026io.pdf" download>Descargar Curriculum</a>
+            <a class="btn btn-secondary" href="#proyectos">Ver proyectos</a>
+          </div>
+        </div>
+        <div class="hero-card reveal">
+          <h2>Stack principal</h2>
+          <ul>
+            <li>PHP</li>
+            <li>Symfony</li>
+            <li>MySQL / Postgresql / Redis</li>
+            <li>Docker / CI-CD / DDD / TDD / Agile</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-glow bg-glow-a"></div>
+      <div class="bg-glow bg-glow-b"></div>
+    </section>
+
+    <section class="section" id="sobre-mi">
+      <div class="container reveal">
+        <h2>Sobre mi</h2>
+        <p>
+          Soy desarrollador backend orientado a arquitectura, rendimiento y calidad de código.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="proyectos">
+      <div class="container">
+        <h2 class="reveal">Proyectos destacados</h2>
+        <div class="cards">
+          <article class="card reveal">
+            <h3>Wordle en espanol</h3>
+            <p>Mini juego en JavaScript con 6 intentos, colores por pista y palabras de 5 letras.</p>
+            <a class="btn btn-secondary" href="wordle/index.html">Jugar ahora</a>
+            <span class="tag">Disponible</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacto">
+      <div class="container reveal">
+        <h2>Contacto</h2>
+        <p>Puedes encontrar más en mi perfil de LinkedIn:</p>
+        <a class="mail-link" href="https://www.linkedin.com/in/v%C3%ADctor-j-plaza-1819b541/"> Mi perfil</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Victor Sur - Built with HTML, CSS y JavaScript.</p>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+  <script src="main.js"></script>
+</body>
+</html>
+

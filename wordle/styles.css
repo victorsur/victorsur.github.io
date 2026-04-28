@@ -1,0 +1,168 @@
+:root {
+  --bg: #070b1a;
+  --card: #0f1833;
+  --text: #eaf0ff;
+  --soft: #a7b4d6;
+  --border: rgba(255, 255, 255, 0.14);
+  --exact: #2f944f;
+  --present: #b89b2a;
+  --absent: #1f263f;
+  --accent: #6f8cff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 20% 15%, #1a2550 0%, var(--bg) 44%);
+  display: grid;
+  place-items: center;
+  padding: 1.2rem;
+}
+
+.wordle-app {
+  width: min(680px, 100%);
+  background: color-mix(in srgb, var(--card) 88%, transparent);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  padding: 1.2rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  color: var(--soft);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--text);
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header p,
+.status,
+.attempt-info {
+  color: var(--soft);
+}
+
+.panel {
+  margin-bottom: 1rem;
+}
+
+.status {
+  min-height: 1.4rem;
+  font-weight: 700;
+}
+
+.status.win {
+  color: #7de4a1;
+}
+
+.status.lose {
+  color: #ff8e8e;
+}
+
+.board {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.board-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+}
+
+.cell {
+  border: 1px solid var(--border);
+  background: #11172e;
+  min-height: 56px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.cell.exact {
+  background: var(--exact);
+  border-color: transparent;
+}
+
+.cell.present {
+  background: var(--present);
+  border-color: transparent;
+}
+
+.cell.absent {
+  background: var(--absent);
+  border-color: transparent;
+}
+
+.guess-form label {
+  display: inline-block;
+  margin-bottom: 0.45rem;
+  font-weight: 600;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+}
+
+input,
+button {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font: inherit;
+}
+
+input {
+  min-height: 42px;
+  padding: 0.6rem 0.8rem;
+  color: var(--text);
+  background: #11172e;
+}
+
+button {
+  min-height: 42px;
+  padding: 0.6rem 1rem;
+  font-weight: 700;
+  background: linear-gradient(120deg, var(--accent), #49b8ff);
+  color: white;
+  cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.secondary-btn {
+  width: 100%;
+  margin-top: 0.8rem;
+  background: transparent;
+  color: var(--text);
+}
+
+@media (max-width: 560px) {
+  .cell {
+    min-height: 48px;
+    font-size: 1.1rem;
+  }
+}
+
